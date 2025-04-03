@@ -2,7 +2,7 @@
 
 ---
 
-# ✨ **aMAGIC md-page.js в PHP**  
+# ✨ **aMAGIC md-page.js в PHP (пока просто идея)**  
 ### *Используем Markdown в PHP — просто и элегантно!*  
 ```php
 <?php
