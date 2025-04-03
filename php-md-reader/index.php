@@ -31,7 +31,6 @@ a {
   a:hover {
     color: #0366d6;
     text-decoration: underline; }
-    
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #24292e; }
@@ -41,12 +40,10 @@ a {
 document.addEventListener('DOMContentLoaded', function() {
     // Находим все ссылки на странице
     const links = document.querySelectorAll('a[target="_blank"]');
-    
     // Перебираем все найденные ссылки и удаляем target="_blank"
     links.forEach(link => {
         link.removeAttribute('target');
     });
-    
     // Для динамически загружаемого контента (если меняется содержимое через AJAX)
     const observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
@@ -57,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
     // Начинаем наблюдение за изменениями в body
     observer.observe(document.body, {
         childList: true,
@@ -67,8 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <!--script src="md-page.js"></script><noscript-->
 <script src="https://cdn.rawgit.com/oscarmorrison/md-page/5833d6d1/md-page.js"></script><noscript>
-
-
 
 HTML;
 
@@ -83,7 +77,6 @@ function getMarkdownFiles() {
     }
     return $files;
 }
-
 // Генерация меню
 $mdFiles = getMarkdownFiles();
 if (!empty($mdFiles)) {
@@ -94,7 +87,6 @@ if (!empty($mdFiles)) {
         }
     echo "\n---\n\n";
 }
-
 // Отображение выбранного файла
 if (isset($_GET['md']) && file_exists($_GET['md'])) {
     $safeFile = basename($_GET['md']);
